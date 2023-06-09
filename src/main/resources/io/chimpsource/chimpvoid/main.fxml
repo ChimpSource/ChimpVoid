@@ -104,7 +104,7 @@
                                 <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
                             </textFill>
                         </Label>
-                        <ToolBar layoutX="14.0" layoutY="497.0" prefHeight="40.0" prefWidth="200.0">
+                        <ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                             <items>
                                 <Button fx:id="DashBoard" mnemonicParsing="false">
                            <graphic>
