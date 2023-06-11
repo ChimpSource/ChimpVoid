@@ -13,6 +13,9 @@ out/
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/vcs.xml
+.idea/.uiDesigner.xml
+.idea/misc.xml
+.idea/encodings.xml
 *.iws
 *.iml
 *.ipr
