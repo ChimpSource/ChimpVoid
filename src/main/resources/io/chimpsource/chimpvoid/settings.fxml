@@ -38,39 +38,39 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.chimpsource.chimpvoid.settings.SettingsController">
   <children>
-    <SplitPane dividerPositions="0.23942093541202672, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <SplitPane dividerPositions="0.25, 0.75" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane>
+        <AnchorPane styleClass="AnchorPane" stylesheets="@css/settings.css">
                <children>
-                  <TextField fx:id="SearchBar" layoutX="15.0" layoutY="14.0" prefHeight="24.0" prefWidth="192.0" />
-                  <ToolBar layoutY="45.0" orientation="VERTICAL" prefHeight="555.0" prefWidth="212.0" style="-fx-background-color: white;">
+                  <TextField fx:id="SearchBar" layoutX="15.0" layoutY="48.0" prefHeight="24.0" prefWidth="192.0" promptText="Search" styleClass="SearchBar" stylesheets="@css/settings.css" />
+                  <ToolBar layoutY="121.0" orientation="VERTICAL" prefHeight="479.0" prefWidth="212.0" styleClass="SettingsList" stylesheets="@css/settings.css">
                     <items>
-                      <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Button" />
+                        <Button mnemonicParsing="false" styleClass="listButton" stylesheets="@css/settings.css" text="Button" textFill="WHITE" />
                     </items>
                   </ToolBar>
+                  <Button fx:id="backButton" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBackButtonClick" styleClass="backButton" stylesheets="@css/settings.css">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children>
         </AnchorPane>
-        <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
+        <ScrollPane hbarPolicy="NEVER" pannable="true" prefWidth="79.0" styleClass="AnchorPane" stylesheets="@css/settings.css" vbarPolicy="NEVER">
           <content>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="600.0" prefWidth="430.0">
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="600.0" prefWidth="670.0" styleClass="AnchorPane" stylesheets="@css/settings.css">
               <children>
                 <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" wrapText="false">
                            <font>
@@ -78,12 +78,13 @@
                            </font>
                            <textFill>
                       <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
-                           </textFill></Label>
+                           </textFill>
+                        </Label>
               </children>
             </AnchorPane>
           </content>
         </ScrollPane>
-        <AnchorPane>
+        <AnchorPane styleClass="AnchorPane" stylesheets="@css/settings.css">
           <children>
             <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Details" textAlignment="CENTER" textFill="$x2" wrapText="false" />
           </children>

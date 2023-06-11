@@ -1,0 +1,19 @@
+.AnchorPane {
+    -fx-background-color: #36393e;
+}
+.SettingsList {
+    -fx-background-color: #36393e;
+
+}
+.backButton {
+    -fx-background-color: #424549;
+}
+.SearchBar {
+    -fx-background-color: #424540;
+    -fx-color: white;
+}
+.listButton {
+    -fx-background-color: #424549;
+    -fx-text-alignment: center;
+
+}
